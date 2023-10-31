@@ -22,6 +22,7 @@ from mobile.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/v1/drf-auth/', include('rest_framework.urls')),
     path('api/v1/mobilechat/', ChatAPIList.as_view()),
     path('api/v1/mobilechat/<int:pk>/',ChatAPIUpdate.as_view()),
     path('api/v1/mobilechatdelete/<int:pk>/',ChatAPIDestroy.as_view()),
